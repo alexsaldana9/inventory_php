@@ -7,7 +7,7 @@
 
     if ($connection->connect_error) die("Fatal Error 1");
 
-    $query ="SELECT * FROM products;";
+    $query ="SELECT * FROM orders;";
     $result = $connection->query($query);
 
     if (!$result) die("Fatal Error 2");
@@ -15,17 +15,18 @@
     $rows_count = $result->num_rows;
 ?>  
 
-<h2 align="center">Inventory</h2>
+<h2 align="center">List of Orders</h2>
 
 <table align="center" class="table">
     <tr>
+        <th>Order Id</th>
         <th>Product Id</th>
-        <th>Product Name</th>
-        <th>Category</th>
-        <th>Storage Location</th>     
-        <th>Re-order Level</th>       
-        <th>Dosage Form</th>
-        <th>Quantity on Hand</th>
+        <th>Quantity Ordered</th>
+        <th>Purchase Date</th>
+        <th>Cost</th>     
+        <th>Expiration Date</th>       
+        <th>Supplier</th>
+        <th>Delivered Date</th>
     </tr>
 
     <?php 
@@ -38,22 +39,25 @@
                     <?php echo $row['id']; ?>
                 </td>
                 <td>
-                    <?php echo $row['name']; ?>
+                    <?php echo $row['product_id']; ?>
                 </td>
                 <td>
-                    <?php echo $row['category']; ?>
+                    <?php echo $row['qty_ordered']; ?>
                 </td>
                 <td>
-                    <?php echo $row['storage']; ?>
+                    <?php echo $row['purchase_date']; ?>
                 </td>
                 <td>
-                    <?php echo $row['reorder_level']; ?>
+                    <?php echo $row['total_cost']; ?>
                 </td>
                 <td>
-                    <?php echo $row['form']; ?>
+                    <?php echo $row['exp_date']; ?>
                 </td>
                 <td>
-                    <p>calculated from recevied - disposal</p>
+                    <?php echo $row['supplier']; ?>
+                </td>
+                <td>
+                    <p>avaialbel </p>
                 </td>
             </tr>
     <?php 

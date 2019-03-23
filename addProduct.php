@@ -1,6 +1,6 @@
-<?php include 'templates/top.php'; ?>
+<?php include 'templates/header.php'; ?>
 
-<h2>Add New Product Order</h2>
+<h2>Register Product</h2>
 <?php 
     include 'db_connection.php';
     
@@ -14,22 +14,14 @@
       $name = test_input($_POST["name"]);
       $category = test_input($_POST["category"]);
       $storage = test_input($_POST["storage"]);
-      $qty_ordered = test_input($_POST["qty_ordered"]);
       $reorder_level = test_input($_POST["reorder_level"]);
-      $purchase_date = test_input($_POST["purchase_date"]);
-      $cost = test_input($_POST["cost"]);
       $form = test_input($_POST["form"]);
-      $exp_date = test_input($_POST["exp_date"]);
-      $supplier = test_input($_POST["supplier"]);
+     
 
-
-      $stmt=$connection->prepare("INSERT INTO products (name, category, storage, qty_ordered,
-        reorder_level, purchase_date, cost, form, exp_date, supplier) VALUES (?,?,?,?,?,?,?,?,?,?)");
-      $stmt->bind_param("sssiisdsss", $name, $category, $storage, $qty_ordered,
-        $reorder_level, $purchase_date, $cost, $form, $exp_date, $supplier);
+      $stmt=$connection->prepare("INSERT INTO products (name, category, storage, reorder_level, form) VALUES (?,?,?,?,?)");
+      $stmt->bind_param("sssis", $name, $category, $storage, $reorder_level, $form);
       $stmt->execute();
-
-
+      
       if (!$stmt) {
         die("Fatal Error 2");
       }
@@ -53,44 +45,24 @@
     <div class="form-row">
       <div class="form-group col-md-3">
         <div class="form-group">
-          <label for="start_date">Product Name </label>
+          <label for="start_date">Product Name</label>
           <input type="text" class="form-control" id="name" name="name" required >
         </div>
         <div class="form-group">
           <label for="start_date">Category </label>
-          <input type="text" class="form-control" id="category" name="category" required >
-        </div>  
+          <input type="text" class="form-control" id="category" name="category" required>
+        </div>
         <div class="form-group">
           <label for="start_date">Storage Location </label>
           <input type="text" class="form-control" id="storage" name="storage" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Quantity Ordered </label>
-          <input type="number" class="form-control" id="qty_ordered" name="qty_ordered" required>
         </div>
         <div class="form-group">
           <label for="start_date">Re-order Level </label>
           <input type="number" class="form-control" id="reorder_level" name="reorder_level" required>
         </div>
         <div class="form-group">
-          <label for="start_date">Purchase Date </label>
-          <input type="date" class="form-control" id="purchase_date" name="purchase_date" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Cost </label>
-          <input type="number" class="form-control" id="cost" name="cost" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Form </label>
+          <label for="start_date">Dosage Form </label>
           <input type="text" class="form-control" id="form" name="form" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Expiration Date </label>
-          <input type="date" class="form-control" id="exp_date" name="exp_date" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Supplier </label>
-          <input type="text" class="form-control" id="supplier" name="supplier" required>
         </div>
       </div> 
     </div>
@@ -101,4 +73,4 @@
     </div>
 </form>
 
-<?php include 'templates/bottom.php'; ?>
+<?php include 'templates/footer.php'; ?>
