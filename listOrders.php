@@ -57,7 +57,11 @@
                     <?php echo $row['supplier']; ?>
                 </td>
                 <td>
-                    <a href="registerDelivery.php?id=<?php echo $row['id'] ?>">Register delivery </a> &nbsp;&nbsp;
+                    <?php if ($row['delivered_date'] == NULL) { ?>
+                        <a href="registerDelivery.php?id=<?php echo $row['id'] ?>">Register delivery </a>
+                    <?php } else { ?>
+                        <?php echo $row['delivered_date']; ?>
+                    <?php } ?>                                       
                 </td>
             </tr>
     <?php 
