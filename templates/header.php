@@ -21,7 +21,7 @@ Final Project
     <nav class="navbar navbar-expand-lg">
 		  <ul class="navbar-nav mr-auto">
 		    <li class="nav-item active">
-		      <a class="nav-link" href="index.php">Home</a>
+		      <a class="nav-link" href="index.php">Inventory</a>
 		    </li>
             <li class="nav-item">
               <a class="nav-link" href="addProduct.php">Add Product</a>
@@ -30,10 +30,7 @@ Final Project
 		      <a class="nav-link" href="addOrder.php">Add Order</a>
 		    </li>
             <li class="nav-item">
-              <a class="nav-link" href="delivery.php">Register Delivery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="remove.php">Dispose</a>
+              <a class="nav-link" href="listOrders.php">Orders</a>
             </li>
 		  </ul>
 		</nav>

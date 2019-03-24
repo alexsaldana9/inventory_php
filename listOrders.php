@@ -57,7 +57,7 @@
                     <?php echo $row['supplier']; ?>
                 </td>
                 <td>
-                    <p>avaialbel </p>
+                    <a href="registerDelivery.php?id=<?php echo $row['id'] ?>">Register delivery </a> &nbsp;&nbsp;
                 </td>
             </tr>
     <?php 
