@@ -3,7 +3,7 @@ function OpenCon() {
   $isSchoolVm = false;
   $dbhost = "localhost";
   $dbuser = "admin";
-  $dbpass = "ccNK0Ioi080g";
+  $dbpass = "20M884TGFQwW";
   $db = "inventory";
 
   if ($isSchoolVm){
