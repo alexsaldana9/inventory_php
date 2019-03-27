@@ -1,6 +1,7 @@
 <?php include 'templates/header.php'; ?>
 
-<h2>Register Disposal</h2>
+<h2>Register Disposal: </h2>
+<p>Deduct from Inventory</p>
 <?php 
     include 'db_connection.php';
     

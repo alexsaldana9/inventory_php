@@ -36,10 +36,10 @@ CREATE TABLE `orders` (
   `product_id` int(4) NOT NULL,
   `qty_ordered` int(4) NOT NULL,
   `purchase_date` date NOT NULL,
-  `total_cost` decimal(4,0) NOT NULL,
+  `total_cost` int(4) NOT NULL,
   `exp_date` date NOT NULL,
   `supplier` varchar(128) NOT NULL,
-  `delivered_date` date NOT NULL
+  `delivered_date` date NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

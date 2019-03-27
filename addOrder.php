@@ -17,15 +17,13 @@
       $total_cost = test_input($_POST["total_cost"]);
       $exp_date = test_input($_POST["exp_date"]);
       $supplier = test_input($_POST["supplier"]);
-     
+      $delivered_date = null;
 
-      $stmt=$connection->prepare("INSERT INTO orders (product_id, qty_ordered, purchase_date, total_cost, exp_date, supplier) VALUES (?,?,?,?,?,?)");
-      $stmt->bind_param("iisdss", $product_id, $qty_ordered, $purchase_date, $total_cost, $exp_date, $supplier);
-      $stmt->execute();
+      $stmt=$connection->prepare("INSERT INTO orders (product_id, qty_ordered, purchase_date, total_cost, exp_date, supplier, delivered_date) VALUES (?,?,?,?,?,?,?)");
+      $stmt->bind_param("iisisss", $product_id, $qty_ordered, $purchase_date, $total_cost, $exp_date, $supplier,$delivered_date);
 
-
-      if (!$stmt) {
-        die("Fatal Error 2");
+      if (!$stmt->execute()) {
+        die ("Execute failed: (" . $stmt->errno . ") " . $stmt->error);
       }
 
       CloseCon($connection);
