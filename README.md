@@ -48,6 +48,13 @@ $ docker exec -it 2f4bab724efc /bin/bash
 
 * NOTE: the id of this container is 2f4bab724efc, and it will change every time 
 
+## To see the apache logs
+
+$ tail -f /var/log/apache2/error.log
+
+NOTE: to write stuff to this log use the `error_log` php function
+
 ## To connect to mysql as root inside of the container
 
 $ mysql -u root
+
