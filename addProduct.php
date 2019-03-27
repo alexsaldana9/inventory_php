@@ -1,7 +1,7 @@
 <?php include 'templates/header.php'; ?>
 
 <h2>Register Product</h2>
-<?php 
+<?php
     include 'db_connection.php';
     
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -17,13 +17,13 @@
       $reorder_level = test_input($_POST["reorder_level"]);
       $form = test_input($_POST["form"]);
      
+      error_log('PARAMETERS: name: '.$name.'; category: '.$category.'; storage: '.$storage.'; reorder_level: '.$reorder_level.'; form: '.$form);
 
       $stmt=$connection->prepare("INSERT INTO products (name, category, storage, reorder_level, form) VALUES (?,?,?,?,?)");
       $stmt->bind_param("sssis", $name, $category, $storage, $reorder_level, $form);
-      $stmt->execute();
       
-      if (!$stmt) {
-        die("Fatal Error 2");
+      if (!$stmt->execute()) {
+        die ("Execute failed: (" . $stmt->errno . ") " . $stmt->error);
       }
 
       CloseCon($connection);
