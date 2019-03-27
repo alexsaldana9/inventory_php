@@ -16,9 +16,25 @@ Final Project
 
     </head>
     <body>
-    <div class="add" align="center">
+        <h1 class="title" align="center">Pharmacy Inventory Manager</h1>
 
-    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3" align="left">
+                    <ul>
+                      <li><a href="index.php">-----------------------<br><br>Inventory<br><br>-----------------------</a></li>
+                      <li><a href="addProduct.php"><br>Add Product<br><br>-----------------------</a></li>
+                      <li><a href="addOrder.php"><br>Add Order<br><br>-----------------------</a></li>
+                      <li><a href="listOrders.php"><br>Orders<br><br>-----------------------</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9" align="left">
+
+        <!-- <div class="add" align="left"> -->
+        
+
+        
+<!--     <nav class="navbar navbar-expand-lg">
 		  <ul class="navbar-nav mr-auto">
 		    <li class="nav-item active">
 		      <a class="nav-link" href="index.php">Inventory</a>
@@ -33,4 +49,4 @@ Final Project
               <a class="nav-link" href="listOrders.php">Orders</a>
             </li>
 		  </ul>
-		</nav>
+		</nav> -->

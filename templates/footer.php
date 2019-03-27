@@ -2,5 +2,8 @@
           <a class="navbar-brand">Pharmacy Inventory Manager &#169; 2019</a>
         </nav>   
     </div>
-    </body>
+  </div>
+  </div>
+  </div>
+  </body>
 </html>
