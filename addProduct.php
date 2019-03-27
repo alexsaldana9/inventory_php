@@ -16,11 +16,12 @@
       $storage = test_input($_POST["storage"]);
       $reorder_level = test_input($_POST["reorder_level"]);
       $form = test_input($_POST["form"]);
+      $quantity = 0;
      
       error_log('PARAMETERS: name: '.$name.'; category: '.$category.'; storage: '.$storage.'; reorder_level: '.$reorder_level.'; form: '.$form);
 
-      $stmt=$connection->prepare("INSERT INTO products (name, category, storage, reorder_level, form) VALUES (?,?,?,?,?)");
-      $stmt->bind_param("sssis", $name, $category, $storage, $reorder_level, $form);
+      $stmt=$connection->prepare("INSERT INTO products (name, category, storage, reorder_level, form, quantity) VALUES (?,?,?,?,?,?)");
+      $stmt->bind_param("sssisi", $name, $category, $storage, $reorder_level, $form, $quantity);
       
       if (!$stmt->execute()) {
         die ("Execute failed: (" . $stmt->errno . ") " . $stmt->error);
