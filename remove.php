@@ -66,7 +66,7 @@
     </div>
     <div class="form-row">
         <div class="form-group">
-            <input type="submit" value="Delete" class="btn btn-primary">
+            <input type="submit" value="Dispose" class="btn btn-primary">
         </div>
     </div>
 </form>
