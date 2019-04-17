@@ -33,7 +33,7 @@ enjoy!
 ## Update the db_connection.php file with the new password provided (docker container)
 
 ## Database set-up
-import the favorites.sql file using phpmyadmin
+import the inventory.sql file using phpmyadmin
 
 
 ################################ To get into the container. Not needed for this project
