@@ -53,13 +53,30 @@
                     <?php echo $row['form']; ?>
                 </td>
                 <td>
-                    <p>calculated from recevied - disposal</p>
+                    <?php echo $row['quantity']; ?>
                 </td>
             </tr>
     <?php 
         }
     ?>
 </table>
+
+
+<div class="col-sm-12">
+    <div class="alert alert-danger" role="alert">
+        
+        <?php
+
+         if ($row['quantity'] <  $row['reorder_level'])
+         {
+            echo "Need to Order: " . $row['id'] . " - ". $row['name'] . " - to refill inventory";
+         }
+
+        ?>
+
+
+    </div>
+</div>
 
 
 <?php 

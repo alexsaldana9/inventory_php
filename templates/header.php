@@ -30,7 +30,7 @@ Final Project
                       <li><a href="registerDisposal.php"><br>Reports<br><br>-----------------------</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-9" align="left">
+                <div class="col-sm-6" align="left">
 
         <!-- <div class="add" align="left"> -->
         
