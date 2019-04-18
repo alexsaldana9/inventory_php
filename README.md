@@ -1,7 +1,6 @@
 
 ## Install docker
 
-
 ## To run the docker container
 
 Go to the directory where the project is: 
@@ -36,17 +35,15 @@ enjoy!
 import the inventory.sql file using phpmyadmin
 
 
-################################ To get into the container. Not needed for this project
+###############################################################################
 
-## To get the containers that are running
+## To get the containers that are running. You will need this to get the id of the container
 
 $ docker ps
 
 ## To open a shell in that container 
 
-$ docker exec -it 2f4bab724efc /bin/bash
-
-* NOTE: the id of this container is 2f4bab724efc, and it will change every time 
+$ docker exec -it 51e21d88eeb9 /bin/bash
 
 ## To see the apache logs
 
