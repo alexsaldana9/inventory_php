@@ -56,26 +56,32 @@
                     <?php echo $row['quantity']; ?>
                 </td>
             </tr>
+
+            <?php
+                if ($row['quantity'] < $row['reorder_level'])
+                {
+            ?>
+                <tr>
+                    <td colspan="7">
+                        <div class="alert alert-danger" role="alert">
+                        <?php
+                            echo "Need to Order: " . $row['id'] . " - ". $row['name'] . " - to refill inventory";
+                        ?>
+                        </div>
+                    </td>
+                </tr>
+            <?php
+                }
+            ?>
     <?php 
         }
     ?>
 </table>
 
-
 <div class="col-sm-12">
-    <div class="alert alert-danger" role="alert">
+
         
-        <?php
-
-         if ($row['quantity'] <  $row['reorder_level'])
-         {
-            echo "Need to Order: " . $row['id'] . " - ". $row['name'] . " - to refill inventory";
-         }
-
-        ?>
-
-
-    </div>
+    
 </div>
 
 
