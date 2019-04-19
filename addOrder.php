@@ -67,7 +67,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Product Id </label>
+              <label class="item" for="start_date">Product Id </label>
             </div>
             <div class="col-sm-6">
                 <select name='products'>
@@ -78,7 +78,7 @@
                     $product_id = $rows['id'];
                     $product_name = $rows['name'];
 
-                    echo "<option value='$product_id'> $product_id - $product_name</option>";
+                    echo "<option value='$product_id' id='id' name='id'> $product_id - $product_name</option>";
                   }
                   ?>
                 </select>
@@ -89,7 +89,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Quantity</label>
+              <label class="item" for="start_date">Quantity</label>
             </div>
             <div class="col-sm-6">
               <input type="number" class="form-control" id="qty_ordered" name="qty_ordered" required>
@@ -100,7 +100,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-               <label for="start_date">Purchase Date </label>
+               <label class="item" for="start_date">Purchase Date </label>
             </div>
             <div class="col-sm-6">
               <input type="date" class="form-control" id="purchase_date" name="purchase_date" required>
@@ -111,7 +111,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Cost </label>
+              <label class="item" for="start_date">Cost </label>
             </div>
             <div class="col-sm-6">
               <input type="number" class="form-control" id="total_cost" name="total_cost" required>
@@ -122,7 +122,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Expiration Date </label>
+              <label class="item" for="start_date">Expiration Date </label>
             </div>
             <div class="col-sm-6">
               <input type="date" class="form-control" id="exp_date" name="exp_date" required>
@@ -133,7 +133,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Supplier </label>
+              <label class="item" for="start_date">Supplier </label>
             </div>
             <div class="col-sm-6">
               <input type="text" class="form-control" id="supplier" name="supplier" required>
@@ -147,7 +147,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-12">
-              <input type="submit" value="Add Order" class="btn btn-primary">
+              <input type="submit" value="Add Order" class="btn btn-primary item">
             </div>
           </div>
         </div>

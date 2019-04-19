@@ -78,7 +78,7 @@
 
     <div class="form-row">
         <div class="form-group">
-            <input type="submit" value="Register Delivery" class="btn btn-primary" />
+            <input type="submit" value="Register Delivery" class="btn btn-primary item" />
         </div>
     </div>
 </form>

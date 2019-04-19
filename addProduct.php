@@ -45,7 +45,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Product Name</label>
+              <label class="item" for="start_date">Product Name</label>
             </div>
             <div class="col-sm-6">
               <input type="text" class="form-control" id="name" name="name" required >
@@ -57,7 +57,7 @@
         <div class="form-group">
            <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Category </label>
+              <label class="item" for="start_date">Category </label>
             </div>
             <div class="col-sm-6">
              <input type="text" class="form-control" id="category" name="category" required>
@@ -69,7 +69,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Storage Location </label>
+              <label class="item" for="start_date">Storage Location </label>
             </div>
             <div class="col-sm-6">
              <input type="text" class="form-control" id="storage" name="storage" required>
@@ -81,7 +81,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Re-order Level </label>
+              <label class="item" for="start_date">Re-order Level </label>
             </div>
             <div class="col-sm-6">
               <input type="number" class="form-control" id="reorder_level" name="reorder_level" required>
@@ -93,7 +93,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="start_date">Dosage Form </label>
+              <label class="item" for="start_date">Dosage Form </label>
             </div>
             <div class="col-sm-6">
               <input type="text" class="form-control" id="form" name="form" required>
@@ -106,7 +106,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-12">
-              <input type="submit" value="Register Product" class="btn btn-primary">
+              <input type="submit" value="Register Product" class="btn btn-primary item">
             </div>
           </div>
         </div>
