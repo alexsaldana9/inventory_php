@@ -46,6 +46,26 @@
         die("Fatal Error 2");
       }
 
+      // $qty = $_POST["qty_ordered"];
+       // $order_id = $_POST["id"];
+
+      $stmt2=$connection->prepare("UPDATE
+                                    products as p
+                                    inner join orders as o
+                                    on o.product_id = p.id
+                                    set p.quantity = p.quantity + o.qty_ordered
+                                    where
+                                      o.id = ?;");
+
+      $stmt2->bind_param("i", $id);
+      $stmt2->execute();
+
+
+      if (!$stmt2) {
+        die("Fatal Error 3");
+      }
+
+
       CloseCon($connection);
 
       header("Location: listOrders.php");
@@ -59,6 +79,7 @@
 
   <label class="item">Order id: <?php echo $row['id']?></label><br>  
   <label class="item">Product id: <?php echo $row['product_id']?></label><br>
+  <label class="item">Quantity Ordered: <?php echo $row['qty_ordered']?></label><br>
  
 
     <div class="form-row">
