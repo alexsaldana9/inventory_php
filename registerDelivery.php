@@ -1,7 +1,8 @@
 <?php include 'templates/header.php'; ?>
 
 <h2>Register Delivery</h2>
-<?php 
+<?php
+    include 'user_loggedin.php';
     include 'db_connection.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "GET"){
@@ -51,13 +52,6 @@
       exit;
     }
 
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
 ?>  
 
 <form method = "post" action = "registerDelivery.php">

@@ -1,3 +1,23 @@
+<?php
+    session_start();
+?>
+
+<?php
+function test_input($data) {
+  $data = $data ? $data : "";
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+
+  if (!$data){
+    die("Missing required parameter");
+  }
+
+  return $data;
+}
+?>
+
+
 <!DOCTYPE html>
 <!-- 
 Pharmacy Inventory Manager
@@ -28,27 +48,9 @@ Final Project
                       <li><a href="listOrders.php"><br>Orders<br><br>-----------------------</a></li>
                       <li><a href="registerDisposal.php"><br>Register Disposal<br><br>-----------------------</a></li>
                       <li><a href="registerDisposal.php"><br>Reports<br><br>-----------------------</a></li>
+                      <li><a href="logout.php"><br>Logout<br><br>-----------------------</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6" align="left">
 
-        <!-- <div class="add" align="left"> -->
-        
-
-        
-<!--     <nav class="navbar navbar-expand-lg">
-		  <ul class="navbar-nav mr-auto">
-		    <li class="nav-item active">
-		      <a class="nav-link" href="index.php">Inventory</a>
-		    </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addProduct.php">Add Product</a>
-            </li>
-		    <li class="nav-item">
-		      <a class="nav-link" href="addOrder.php">Add Order</a>
-		    </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listOrders.php">Orders</a>
-            </li>
-		  </ul>
-		</nav> -->
+ 

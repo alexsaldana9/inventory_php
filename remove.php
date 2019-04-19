@@ -2,7 +2,8 @@
 
 <h2>Register Disposal: </h2>
 <p>Deduct from Inventory</p>
-<?php 
+<?php
+    include 'user_loggedin.php'; 
     include 'db_connection.php';
     
     if ($_SERVER["REQUEST_METHOD"] == "GET"){

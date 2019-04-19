@@ -1,7 +1,8 @@
 <?php include 'templates/header.php'; ?>
 
 <h2>Add New Order</h2>
-<?php 
+<?php
+    include 'user_loggedin.php'; 
     include 'db_connection.php';
 
 
@@ -58,13 +59,6 @@
       exit;
     }
 
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
 ?>  
 
 <form method = "post" action = "addOrder.php">

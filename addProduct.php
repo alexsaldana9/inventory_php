@@ -2,6 +2,7 @@
 
 <h2>Register Product</h2>
 <?php
+    include 'user_loggedin.php';
     include 'db_connection.php';
     
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -33,13 +34,6 @@
       exit;
     }
 
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
 ?>  
 
 <form method = "post" action = "addProduct.php">
