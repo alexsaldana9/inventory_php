@@ -1,6 +1,7 @@
 <?php include 'templates/header.php'; ?>
 
-<h2>Register Product</h2>
+<h2> Register Product</h2>
+
 <?php
     include 'user_loggedin.php';
     include 'db_connection.php';
@@ -38,32 +39,76 @@
 
 <form method = "post" action = "addProduct.php">
     <div class="form-row">
-      <div class="form-group col-md-3">
+      <div class="form-group col-sm-6">
+
+
         <div class="form-group">
-          <label for="start_date">Product Name</label>
-          <input type="text" class="form-control" id="name" name="name" required >
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Product Name</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="name" name="name" required >
+            </div>           
+          </div>
         </div>
+
+
         <div class="form-group">
-          <label for="start_date">Category </label>
-          <input type="text" class="form-control" id="category" name="category" required>
+           <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Category </label>
+            </div>
+            <div class="col-sm-6">
+             <input type="text" class="form-control" id="category" name="category" required>
+           </div>
+          </div>
         </div>
+
+
         <div class="form-group">
-          <label for="start_date">Storage Location </label>
-          <input type="text" class="form-control" id="storage" name="storage" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Storage Location </label>
+            </div>
+            <div class="col-sm-6">
+             <input type="text" class="form-control" id="storage" name="storage" required>
+            </div>
+          </div>          
         </div>
+
+
         <div class="form-group">
-          <label for="start_date">Re-order Level </label>
-          <input type="number" class="form-control" id="reorder_level" name="reorder_level" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Re-order Level </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="reorder_level" name="reorder_level" required>
+            </div>
+          </div>
         </div>
+
+
         <div class="form-group">
-          <label for="start_date">Dosage Form </label>
-          <input type="text" class="form-control" id="form" name="form" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Dosage Form </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="form" name="form" required>
+            </div>
+          </div>
         </div>
       </div> 
     </div>
     <div class="form-row">
         <div class="form-group">
-            <input type="submit" value="add" class="btn btn-primary">
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="submit" value="Register Product" class="btn btn-primary">
+            </div>
+          </div>
         </div>
     </div>
 </form>

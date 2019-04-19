@@ -42,15 +42,15 @@ Final Project
             <div class="row">
                 <div class="col-sm-3" align="left">
                     <ul>
-                      <li><a href="index.php">-----------------------<br><br>Inventory<br><br>-----------------------</a></li>
-                      <li><a href="addProduct.php"><br>Add Product<br><br>-----------------------</a></li>
-                      <li><a href="addOrder.php"><br>Add Order<br><br>-----------------------</a></li>
-                      <li><a href="listOrders.php"><br>Orders<br><br>-----------------------</a></li>
-                      <li><a href="registerDisposal.php"><br>Register Disposal<br><br>-----------------------</a></li>
-                      <li><a href="registerDisposal.php"><br>Reports<br><br>-----------------------</a></li>
-                      <li><a href="logout.php"><br>Logout<br><br>-----------------------</a></li>
+                      <li><a href="index.php">--------------------<br><br>Inventory<br><br>--------------------</a></li>
+                      <li><a href="addProduct.php"><br>Add Product<br><br>--------------------</a></li>
+                      <li><a href="addOrder.php"><br>Add Order<br><br>--------------------</a></li>
+                      <li><a href="listOrders.php"><br>Orders<br><br>--------------------</a></li>
+                      <li><a href="registerDisposal.php"><br>Register Disposal<br><br>--------------------</a></li>
+                      <li><a href="registerDisposal.php"><br>Reports<br><br>--------------------</a></li>
+                      <li><a href="logout.php"><br>Logout<br><br>--------------------</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-6" align="left">
+                <div class="col-sm-9" align="left">
 
  
