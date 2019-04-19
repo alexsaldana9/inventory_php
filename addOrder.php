@@ -1,6 +1,6 @@
 <?php include 'templates/header.php'; ?>
 
-<h2>Add New Order</h2>
+<h2>Add Order</h2>
 <?php
     include 'user_loggedin.php'; 
     include 'db_connection.php';
@@ -63,50 +63,93 @@
 
 <form method = "post" action = "addOrder.php">
     <div class="form-row">
-      <div class="form-group col-md-3">
+      <div class="form-group col-md-6">
         <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Product Id </label>
+            </div>
+            <div class="col-sm-6">
+                <select name='products'>
+                  <?php
+                  //To add dropdown menu -- https://www.youtube.com/watch?v=TNPxG2yrPlM
+                  while ($rows = $result_get->fetch_assoc())
+                  {
+                    $product_id = $rows['id'];
+                    $product_name = $rows['name'];
 
-          <select name='products'>
-            <?php
-            //To add dropdown menu -- https://www.youtube.com/watch?v=TNPxG2yrPlM
-            while ($rows = $result_get->fetch_assoc())
-            {
-              $product_id = $rows['id'];
-              $product_name = $rows['name'];
+                    echo "<option value='$product_id'> $product_id - $product_name</option>";
+                  }
+                  ?>
+                </select>
+            </div>
+          </div>
+        </div>
 
-              echo "<option value='$product_id'> $product_id - $product_name</option>";
-            }
-            ?>
-          </select>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Quantity</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="qty_ordered" name="qty_ordered" required>
+            </div>
+          </div>
+        </div>
 
-          <label for="start_date">Product Id </label>
-          <input type="number" class="form-control" id="product_id" name="product_id" required >
-        </div>
         <div class="form-group">
-          <label for="start_date">Quantity Ordered </label>
-          <input type="number" class="form-control" id="qty_ordered" name="qty_ordered" required>
+          <div class="row">
+            <div class="col-sm-6">
+               <label for="start_date">Purchase Date </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" id="purchase_date" name="purchase_date" required>
+            </div>
+          </div>
         </div>
+          
         <div class="form-group">
-          <label for="start_date">Purchase Date </label>
-          <input type="date" class="form-control" id="purchase_date" name="purchase_date" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Cost </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="total_cost" name="total_cost" required>
+            </div>
+          </div>
         </div>
+
         <div class="form-group">
-          <label for="start_date">Cost </label>
-          <input type="number" class="form-control" id="total_cost" name="total_cost" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Expiration Date </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" id="exp_date" name="exp_date" required>
+            </div>
+          </div>
         </div>
+
         <div class="form-group">
-          <label for="start_date">Expiration Date </label>
-          <input type="date" class="form-control" id="exp_date" name="exp_date" required>
-        </div>
-        <div class="form-group">
-          <label for="start_date">Supplier </label>
-          <input type="text" class="form-control" id="supplier" name="supplier" required>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="start_date">Supplier </label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="supplier" name="supplier" required>
+            </div>
+          </div>
         </div>
       </div> 
     </div>
+
     <div class="form-row">
         <div class="form-group">
-            <input type="submit" value="add" class="btn btn-primary">
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="submit" value="Add Order" class="btn btn-primary">
+            </div>
+          </div>
         </div>
     </div>
 </form>
