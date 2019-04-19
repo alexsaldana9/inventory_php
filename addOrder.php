@@ -3,13 +3,39 @@
 <h2>Add New Order</h2>
 <?php 
     include 'db_connection.php';
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "GET"){
+      $connection = OpenCon();
+      if ($connection->connect_error) {
+        die("Fatal Error 1"); 
+      }
+
+      $query_get ="SELECT id, name FROM products;";
+      $result_get = $connection->query($query_get);
+
+      if (!$result_get) {
+        die("Fatal Error 2");
+      }
+
+      CloseCon($connection);          
+    }
+
+
     
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
       $connection = OpenCon();
 
       if ($connection->connect_error) {
-        die("Fatal Error 1"); 
+        die("Fatal Error 3"); 
       }
+    
+      $query ="SELECT id, name FROM products;";
+      $result = $connection->query($query);
+
+      if (!$result) die("Fatal Error 4");
+
+      $rows_count = $result->num_rows;
 
       $product_id = test_input($_POST["product_id"]);
       $qty_ordered = test_input($_POST["qty_ordered"]);
@@ -45,6 +71,20 @@
     <div class="form-row">
       <div class="form-group col-md-3">
         <div class="form-group">
+
+          <select name='products'>
+            <?php
+            //To add dropdown menu -- https://www.youtube.com/watch?v=TNPxG2yrPlM
+            while ($rows = $result_get->fetch_assoc())
+            {
+              $product_id = $rows['id'];
+              $product_name = $rows['name'];
+
+              echo "<option value='$product_id'> $product_id - $product_name</option>";
+            }
+            ?>
+          </select>
+
           <label for="start_date">Product Id </label>
           <input type="number" class="form-control" id="product_id" name="product_id" required >
         </div>
