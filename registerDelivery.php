@@ -57,21 +57,28 @@
 <form method = "post" action = "registerDelivery.php">
   <input type="hidden" name="id" value="<?php echo $row['id']?>">
 
-  <label></label>Order Id: <?php echo $row['id']?></label><br>  
-  <label>Product Id: <?php echo $row['product_id']?></label><br>
+  <label class="item">Order id: <?php echo $row['id']?></label><br>  
+  <label class="item">Product id: <?php echo $row['product_id']?></label><br>
  
 
     <div class="form-row">
-      <div class="form-group col-md-3">
+      <div class="form-group col-md-6">
         <div class="form-group">
-          <label for="start_date">Delivered date:</label>
-          <input type="date" class="form-control" id="delivered_date" name="delivered_date" required />
+          <div class="row">
+            <div class="col-sm-6 item">
+               <label for="start_date" class="title-tag">Delivered date:</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" id="delivered_date" name="delivered_date" required />
+            </div>
+          </div>
         </div>
       </div> 
     </div>
+
     <div class="form-row">
         <div class="form-group">
-            <input type="submit" value="Update" class="btn btn-primary" />
+            <input type="submit" value="Register Delivery" class="btn btn-primary" />
         </div>
     </div>
 </form>
