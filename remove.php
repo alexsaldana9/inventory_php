@@ -1,7 +1,7 @@
 <?php include 'templates/header.php'; ?>
 
 <h2>Register Disposal: </h2>
-<p>Deduct from Inventory</p>
+
 <?php
     include 'user_loggedin.php'; 
     include 'db_connection.php';
@@ -54,15 +54,21 @@
 <form method = "post" action = "remove.php">
 	 <input type="hidden" name="id" value="<?php echo $row['id']?>">
     <div class="form-row">
-      <div class="form-group col-md-3">
-        <div class="form-group">
-          <label for="start_date">Product Name : <?php echo $row['name']?></label>
-          <input type="text" class="form-control" id="name" name="name" required >
-        </div>
-        <div class="form-group">
-          <label for="start_date">Quantity </label>
-          <input type="text" class="form-control" id="category" name="category" required >
-        </div>  
+      <div class="form-group col-md-6">
+
+          <label  class="item" for="start_date">Product Name : <?php echo $row['name']?></label>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <label class="item" for="start_date">Quantity </label>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="category" name="category" required >
+              </div>
+            </div>
+          </div>
+
       </div> 
     </div>
     <div class="form-row">
