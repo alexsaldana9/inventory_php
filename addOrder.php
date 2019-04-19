@@ -70,7 +70,7 @@
               <label class="item" for="start_date">Product Id </label>
             </div>
             <div class="col-sm-6">
-                <select name='products'>
+                <select name='product_id'>
                   <?php
                   //To add dropdown menu -- https://www.youtube.com/watch?v=TNPxG2yrPlM
                   while ($rows = $result_get->fetch_assoc())
