@@ -47,7 +47,7 @@ Final Project
                       <li><a href="addOrder.php"><br>Add Order<br><br>--------------------</a></li>
                       <li><a href="listOrders.php"><br>Orders<br><br>--------------------</a></li>
                       <li><a href="registerDisposal.php"><br>Register Disposal<br><br>--------------------</a></li>
-                      <li><a href="registerDisposal.php"><br>Reports<br><br>--------------------</a></li>
+                      <li><a href="reports.php"><br>Reports<br><br>--------------------</a></li>
                       <li><a href="logout.php"><br>Logout<br><br>--------------------</a></li>
                     </ul>
                 </div>
