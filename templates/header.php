@@ -32,6 +32,11 @@ Final Project
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css" />
 
     </head>
@@ -40,7 +45,7 @@ Final Project
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-3" align="left">
+                <div id="nav-left" class="col-sm-3" align="left">
                     <ul>
                       <li><a href="index.php">--------------------<br><br>Inventory<br><br>--------------------</a></li>
                       <li><a href="addProduct.php"><br>Register Product<br><br>--------------------</a></li>

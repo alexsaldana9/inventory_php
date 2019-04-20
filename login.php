@@ -59,6 +59,12 @@
     </div>
 </form>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+     $("#nav-left").hide(); 
+  });
+
+</script>
 
 
 <?php include 'templates/footer.php'; ?>
