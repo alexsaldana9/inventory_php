@@ -1,6 +1,6 @@
 <?php include 'templates/header.php'; ?>
 
-<h2>Register Disposal: </h2>
+<h2>Register Disposal </h2>
 
 <?php
     include 'user_loggedin.php'; 
@@ -26,7 +26,7 @@
       CloseCon($connection);          
     }
 
-     if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
       $connection = OpenCon();
 
       if ($connection->connect_error) {
@@ -35,14 +35,17 @@
 
       $id = $_POST["id"];
 
-      $stmt=$connection->prepare("DELETE FROM products Where id=?;");
-      $stmt->bind_param("i", $id);
-      $stmt->execute();
+      $quantity = $_POST["quantity_dipose"];
+
+      $stmt2=$connection->prepare("UPDATE products SET quantity =(quantity - ?) WHERE id=?;");
+      $stmt2->bind_param("ii", $quantity, $id);
+      $stmt2->execute();
 
 
-      if (!$stmt) {
-        die("Fatal Error 2 post");
+      if (!$stmt2) {
+        die("Fatal Error 3 post");
       }
+
 
       CloseCon($connection);
 
@@ -64,7 +67,7 @@
                 <label class="item" for="start_date">Quantity </label>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="form-control" id="category" name="category" required >
+                <input type="text" class="form-control" id="quantity_dipose" name="quantity_dipose" required >
               </div>
             </div>
           </div>
