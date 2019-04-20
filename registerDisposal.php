@@ -55,7 +55,7 @@
                     <?php echo $row['form']; ?>
                 </td>
                 <td>
-                    <p>calculated from recevied - disposal</p>
+                    <?php echo $row['quantity']; ?>
                 </td>
                 <td>
                     <a href="remove.php?id=<?php echo $row['id'] ?>">Dispose </a>
