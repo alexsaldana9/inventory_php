@@ -37,10 +37,8 @@
     }
  
     $connection = OpenCon();
-    $display_heading = array('id'=>'ID', 'product_id'=> 'Name', 'qty_ordered'=> 'Quantity Ordered');
      
     $result = $connection->query("SELECT id, product_id, qty_ordered  FROM orders") or die("database error 1");
-    $header = $connection->query("SHOW id, product_id, qty_ordered FROM products");
      
     $pdf = new PDF();
     //header
@@ -48,9 +46,12 @@
     //foter page
     $pdf->AliasNbPages();
     $pdf->SetFont('Arial','B',12);
-    foreach($header as $heading) {
-        $pdf->Cell(40,12,$display_heading[$heading['Field']],1);
-    }
+
+    $pdf->Cell(40, 12, 'Id - order',1);
+    $pdf->Cell(40, 12, 'Product id',1);
+    $pdf->Cell(40, 12, 'Qty ordered',1);
+
+
     foreach($result as $row) {
         $pdf->Ln();
         foreach($row as $column)
