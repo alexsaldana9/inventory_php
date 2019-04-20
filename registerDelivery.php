@@ -46,9 +46,6 @@
         die("Fatal Error 2");
       }
 
-      // $qty = $_POST["qty_ordered"];
-       // $order_id = $_POST["id"];
-
       $stmt2=$connection->prepare("UPDATE
                                     products as p
                                     inner join orders as o
