@@ -8,6 +8,12 @@
 Inventory List</button>
 </form>
 
+<form class="form-inline" method="post" action="order_report.php">
+<button type="submit" id="pdf" name="generate_pdf" class="btn btn-primary"><i class="fa fa-pdf"" aria-hidden="true"></i>
+Orders List</button>
+</form>
+
+
 </div>
 
 <?php include 'templates/footer.php'; ?>

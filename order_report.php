@@ -19,7 +19,7 @@
             // Move to the right
             $this->Cell(80);
             // Title
-            $this->Cell(80,10,'Inventory List',1,0,'C');
+            $this->Cell(80,10,'Orders List',1,0,'C');
             // Line break
             $this->Ln(20);
         }
@@ -37,10 +37,10 @@
     }
  
     $connection = OpenCon();
-    $display_heading = array('id'=>'ID', 'name'=> 'Name', 'quantity'=> 'Qty');
+    $display_heading = array('id'=>'ID', 'product_id'=> 'Name', 'qty_ordered'=> 'Quantity Ordered');
      
-    $result = $connection->query("SELECT id, name, quantity  FROM products") or die("database error 1");
-    $header = $connection->query("SHOW id, name, quantity FROM products");
+    $result = $connection->query("SELECT id, product_id, qty_ordered  FROM orders") or die("database error 1");
+    $header = $connection->query("SHOW id, product_id, qty_ordered FROM products");
      
     $pdf = new PDF();
     //header

@@ -68,3 +68,7 @@ h2{
 .item {
   font-size: 1.5em;
 }
+
+.btn {
+  margin-bottom: 2em; 
+}
