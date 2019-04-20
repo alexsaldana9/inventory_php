@@ -1,5 +1,7 @@
 <?php include 'templates/header.php'; ?>
 
+<!-- Make reports  - to pdf -->
+<!-- https://www.phpflow.com/php/generate-pdf-file-mysql-database-using-php/ -->
 
 <div class="container" style="padding-top:50px">
 <h2>Reports</h2>
