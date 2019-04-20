@@ -14,6 +14,8 @@ Orders List</button>
 </form>
 
 
+<img id="printer" src="printer.png">
+
 </div>
 
 <?php include 'templates/footer.php'; ?>
