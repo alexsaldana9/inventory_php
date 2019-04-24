@@ -1,0 +1,16 @@
+
+# Pharmacy Inventory Manager
+
+# Group: Flora Carbon, Alexandra Saldana
+
+
+# Installation instructions
+# Connect to phpmyadmin
+
+phpmyadmin - user: root
+						 password: password
+
+
+# Database set-up
+
+import the inventory.sql file using phpmyadmin
