@@ -7,6 +7,8 @@
 # Installation instructions
 # Connect to phpmyadmin
 
+In the browser type:  http://localhost/phpmyadmin/
+
 phpmyadmin - user: root
 						 password: password
 
@@ -14,3 +16,26 @@ phpmyadmin - user: root
 # Database set-up
 
 import the inventory.sql file using phpmyadmin
+
+# Test the web application
+
+1. Login
+
+In the browser type: http://localhost/login.php
+
+		user: leia
+		password: 123456
+
+
+How to use the web application: 
+
+1. User must be authenticated - Login
+
+2. Register product first
+Product must be register before users place any orders, or register any disposals or deliveries
+
+3. Add Order 
+Product must be registered in the inventory as an approved product.
+
+4. For a Register Disposal and Delivery
+
